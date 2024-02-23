@@ -8,11 +8,17 @@ export default function ToDoList(props) {
         {props.todos.map((todo, id) => {
           return (
             <li key={id}>
-              <label>
-                <input type="checkbox" checked={todo.completed} onChange={(e) => props.toggleTodo(todo.id, e.target.checked)}/>
-                {todo.title}
-                <button className="btn" onClick = {() => props.editTodo(todo.id)}>Edit</button>
-                <button className="btn btn-danger"onClick = {() => props.deleteTodo(todo.id)}>Delete</button>
+              <label className="w-full">
+                <div className="flex items-center justify-between w-full">
+                  <div>
+                    <input type="checkbox" checked={todo.completed} onChange={(e) => props.toggleTodo(todo.id, e.target.checked)}/>
+                    {todo.title}
+                  </div>
+                  <div>
+                    <button className="btn" onClick = {() => props.editTodo(todo.id, todo.title)}>Edit</button>
+                    <button className="btn btn-danger ml-2"onClick = {() => props.deleteTodo(todo.id)}>Delete</button>
+                  </div>
+                </div>
               </label>
             </li>
           );

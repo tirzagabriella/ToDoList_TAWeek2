@@ -43,8 +43,9 @@ function App() {
     });
   }
   
-  function editTodo(id) {
+  function editTodo(id, title) {
     setEditedId(id)
+    setEditedValue(title)
     toggle()
   }
 
