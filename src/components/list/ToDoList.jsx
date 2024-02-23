@@ -10,9 +10,9 @@ export default function ToDoList(props) {
             <li key={id}>
               <label className="w-full">
                 <div className="flex items-center justify-between w-full">
-                  <div>
+                  <div className="flex">
                     <input type="checkbox" checked={todo.completed} onChange={(e) => props.toggleTodo(todo.id, e.target.checked)}/>
-                    {todo.title}
+                    <div className="max-w-52">{todo.title}</div>
                   </div>
                   <div>
                     <button className="btn" onClick = {() => props.editTodo(todo.id, todo.title)}>Edit</button>
