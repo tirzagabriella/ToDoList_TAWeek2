@@ -8,3 +8,5 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 References for tailwind: https://devpress.csdn.net/react/62ec1e2789d9027116a1033f.html
+
+Live Site: https://tirzagabriella.github.io/ToDoList_TAWeek2/
