@@ -5,6 +5,7 @@ import './App.css'
 import AddItemForm from './components/form/AddItemForm';
 import ToDoList from './components/list/ToDoList';
 import Modal from './components/modal/Modal';
+import StudentIdentity from './components/student_identity/StudentIdentity';
 
 function App() {
 
@@ -74,6 +75,8 @@ function App() {
 
   return(
     <>
+
+      <StudentIdentity/>
       <AddItemForm 
         handleSubmit={handleSubmit}
         newItem={newItem}
