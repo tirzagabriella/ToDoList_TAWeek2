@@ -11,12 +11,28 @@ export default function ToDoList(props) {
               <label className="w-full">
                 <div className="flex items-center justify-between w-full">
                   <div className="flex">
-                    <input type="checkbox" checked={todo.completed} onChange={(e) => props.toggleTodo(todo.id, e.target.checked)}/>
+                    <input
+                      type="checkbox"
+                      checked={todo.completed}
+                      onChange={(e) =>
+                        props.toggleTodo(todo.id, e.target.checked)
+                      }
+                    />
                     <div className="max-w-52">{todo.title}</div>
                   </div>
                   <div>
-                    <button className="btn" onClick = {() => props.editTodo(todo.id, todo.title)}>Edit</button>
-                    <button className="btn btn-danger ml-2"onClick = {() => props.deleteTodo(todo.id)}>Delete</button>
+                    <button
+                      className="btn"
+                      onClick={() => props.editTodo(todo.id, todo.title)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-danger ml-2 bg-red-400"
+                      onClick={() => props.deleteTodo(todo.id)}
+                    >
+                      Delete
+                    </button>
                   </div>
                 </div>
               </label>
